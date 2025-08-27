@@ -1,0 +1,27 @@
+.headercontenedor {
+    display: grid;
+    align-items: center;
+    height: 15rem;
+    grid-template-columns: 1fr auto;
+    border-bottom: 1rem solid gray;
+    padding: 0.2rem;
+}
+
+.header-circulo {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50px;
+    border: white;
+}
+
+.header-texto {
+    font-size: 3rem;
+}
+
+.imagen {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
