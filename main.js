@@ -16,4 +16,4 @@ return seccion;
 
 }
 
-document.body.appendChild(seccion());
+document.body.appendChild(seccion());  

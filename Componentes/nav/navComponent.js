@@ -38,5 +38,5 @@ export function nav() {
   cartDiv.appendChild(cartImg);
   menu.appendChild(cartDiv);
 
-  return menu; 
+  return menu;    
 }

@@ -3,15 +3,17 @@
     align-items: center;
     height: 15rem;
     grid-template-columns: 1fr auto;
-    border-bottom: 1rem solid gray;
+    border-bottom: 1rem solid rgb(179, 45, 167);
     padding: 0.2rem;
+    gap: 1rem;
 }
 
 .header-circulo {
     width: 10rem;
     height: 10rem;
     border-radius: 50px;
-    border: white;
+    border: rgb(255, 255, 255);
+    
 }
 
 .header-texto {
@@ -24,4 +26,31 @@
     border-radius: 50px;
     object-fit: cover;
     margin-right: 1rem;
+}
+
+/* ✅ Responsive para teléfonos (pantallas pequeñas) */
+@media (max-width: 768px) {
+    .headercontenedor {
+        grid-template-columns: 1fr; /* Pasa a 1 columna */
+        text-align: center;
+        height: auto; /* Ajusta altura automática */
+        padding: 1rem;
+    }
+
+    .header-circulo {
+        width: 8rem;
+        height: 8rem;
+        margin: 0 auto; /* Centra el círculo */
+    }
+
+    .imagen {
+        width: 6rem;
+        height: 6rem;
+        margin: 0 auto;
+    }
+
+    .header-texto {
+        font-size: 2rem; /* Reduce tamaño del texto */
+        margin-top: 1rem;
+    }
 }

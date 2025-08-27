@@ -9,23 +9,21 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
-}
-
 .Verde {
     background: linear-gradient(135deg, #32cd32, #228b22);
     color: rgb(255, 255, 255);
 }
-
 .item img {
     display: block;
     max-width: 70%;
     margin: 0 auto 1.5rem auto;
     border-radius: 1rem;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.3s ease;
+}
+.item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
 }
 
 .item img:hover {

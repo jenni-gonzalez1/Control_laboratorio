@@ -1,3 +1,4 @@
+import { listaDeCompras } from "../../../dataBase/carrito.js";
 export function item(titulo, price, description, category, urImg) {
 
     let item = document.createElement('div');
@@ -9,10 +10,9 @@ export function item(titulo, price, description, category, urImg) {
     item.appendChild(tituloEl);
 
     
-    let imagen = document.createElement('img');
-    imagen.src = urImg;
-    imagen.alt = titulo;
-    item.appendChild(imagen);
+    let image = document.createElement('img');
+    image.src = urImg;
+    item.appendChild(image);
 
     
     let descripcionEl = document.createElement("p");
@@ -20,7 +20,7 @@ export function item(titulo, price, description, category, urImg) {
     descripcionEl.textContent = description;
     item.appendChild(descripcionEl);
 
-
+    
     let categoriaEl = document.createElement("span");
     categoriaEl.className = "Categoria"
     categoriaEl.textContent = category;
@@ -32,9 +32,9 @@ export function item(titulo, price, description, category, urImg) {
     item.appendChild(precioEl);
 
     item.addEventListener("click", () => {
-        thisitem.classList.add("verde")
-        let rHeader = document.querySelector(".header");
-        rHeader.classList.add("ocultar");
+        listaDeCompras.push("Comal");
+        console.log(listaDeCompras.length);
+        console.log(listaDeCompras);
     });
 
     return item;
