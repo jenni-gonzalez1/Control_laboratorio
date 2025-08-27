@@ -1,9 +1,22 @@
 import { header } from "./Componentes/header/headerComponent.js";
 import {seccion1} from "./Componentes/seccion1/seccionComponent.js";
 
+
 function seccion (){
 
    let seccion = document.createElement('section');
+
+   //localStorange
+   let listaDeCompras = localStorage.getItem("carritoLista");
+        
+       if (!listaDeCompras) {
+            listaDeCompras = [];
+        } else {
+            listaDeCompras = JSON.parse(listaDeCompras);
+        }
+        
+        console.log(listaDeCompras);
+        
 
    seccion.appendChild(header());
 

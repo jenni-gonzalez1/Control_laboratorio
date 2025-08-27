@@ -1,4 +1,4 @@
-import { listaDeCompras } from "../../../dataBase/carrito.js";
+
 export function item(titulo, price, description, category, urImg) {
 
     let item = document.createElement('div');
@@ -32,11 +32,9 @@ export function item(titulo, price, description, category, urImg) {
     item.appendChild(precioEl);
 
     item.addEventListener("click", () => {
-        listaDeCompras.push("Comal");
-        console.log(listaDeCompras.length);
-        console.log(listaDeCompras);
+        
     });
-
+    
     return item;
 }
 
