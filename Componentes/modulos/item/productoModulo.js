@@ -1,9 +1,11 @@
+import { guardarProducto, obtenerProductos } from "../../../control/miControlStorage.js";
+import { listaDeCompras } from "../../../dataBase/carrito.js";
 
-export function item(titulo, price, description, category, urImg) {
+export function item(titulo,price, description, category, urImg) {
+
 
     let item = document.createElement('div');
     item.className = "item";
-
     
     let tituloEl = document.createElement("h2");
     tituloEl.textContent = titulo;
@@ -31,8 +33,18 @@ export function item(titulo, price, description, category, urImg) {
     precioEl.textContent = price;
     item.appendChild(precioEl);
 
+    let carritoLocalStorage = obtenerProductos();
+    console.log("carrito", carritoLocalStorage);
+
     item.addEventListener("click", () => {
-        
+        let carritoLocalStorage = obtenerProductos();
+        console.log("carrito", carritoLocalStorage);
+
+        carritoLocalStorage.push({ precio: price, nombre: titulo });
+
+        guardarProducto (carritoLocalStorage);
+        console.log("Producto en LOcalStorang");
+        location.reload();
     });
     
     return item;

@@ -1,3 +1,5 @@
+import { obtenerProductos } from "../../control/miControlStorage.js";
+
 export function nav() {
   let menu = document.createElement('div');
   menu.className = "menu";
@@ -20,8 +22,18 @@ export function nav() {
   productsDiv.appendChild(productsImg);
   menu.appendChild(productsDiv);
 
+  let divItems = document.createElement('div');
+  className = "menu-item";
+  //cuantos ekementos hay en el carrito
+  divItems.textContent = totalCarrito.length;
+
+  if(obtenerProductos()!=""){
+    divCarrito.appendChild(divItems);
+  }
+
   // Help
-  let helpDiv = document.createElement('div');
+  let helpDiv = document.createElement('div')("a");
+  divhelpDiv.href = "pages/carrito.html"
   helpDiv.className = "menu-item";
   let helpImg = document.createElement('img');
   helpImg.src = "Componentes/assets/cart.png";
@@ -39,4 +51,4 @@ export function nav() {
   menu.appendChild(cartDiv);
 
   return menu;    
-}
+}   
